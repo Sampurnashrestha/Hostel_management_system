@@ -2,6 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./layout/Sidebar";
 import Navbar from "./layout/Navbar";
 import Dashboard from "./page_admin/Dashboard";
+import Room from "./page_admin/Room";
+import Student from "./page_admin/Student";
+import Fee from "./page_admin/Fee";
+import Main from "./page_admin/main";
 
 const App = () => {
   return (
@@ -12,12 +16,13 @@ const App = () => {
           <Sidebar />
           <div>
             
-          <div className="flex-1 p-3 w-full">
+          <div className="flex-1  w-full">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/room" element={<h1>Room</h1>} />
-              <Route path="/student" element={<h1>Student</h1>} />
-              <Route path="/fees" element={<h1>Fees</h1>} />
+              <Route path="/" element={<Main />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/room" element={<Room />} />
+              <Route path="/student" element={<Student />} />
+              <Route path="/fees" element={<Fee />} />
             </Routes>
           </div>
          </div>
